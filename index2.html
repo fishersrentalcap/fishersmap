@@ -44,7 +44,7 @@
     // Define LayerGroups
     const greenLayer = L.layerGroup();
     const redLayer = L.layerGroup();
-    const instLayer = L.layerGroup(); // was yellowLayer
+    const instLayer = L.layerGroup();
 
     // Load each dataset
     fetch('green.geojson')
@@ -61,7 +61,7 @@
         onEachFeature: bindPopup
       }).addTo(redLayer));
 
-    fetch('inst.geojson')  // new file
+    fetch('inst.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
         style: styleFromProperties,
@@ -105,10 +105,13 @@
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
-      div.innerHTML += "<strong>Legend</strong><br>";
-      div.innerHTML += '<i style="background:#33a02c"></i> Green<br>';
-      div.innerHTML += '<i style="background:#e31a1c"></i> Red<br>';
-      div.innerHTML += '<i style="background:#ffff00"></i> Institutional Rentals<br>';
+      div.innerHTML += "<strong>Institutional Rental Categories</strong><br>";
+      div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+      div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
+      div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
+      div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
+      div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
+      div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
       div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       return div;
     };
