@@ -49,21 +49,21 @@
     const subdivisionsLayer = L.layerGroup();
 
     // Load each dataset
-    fetch('land_use.geojson')
+    fetch('green.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
         style: { color: "#33a02c", fillOpacity: 0.5 },
         onEachFeature: bindPopup
       }).addTo(landUseLayer));
 
-    fetch('zoning.geojson')
+    fetch('yellow.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
         style: { color: "#1f78b4", fillOpacity: 0.5 },
         onEachFeature: bindPopup
       }).addTo(zoningLayer));
 
-    fetch('subdivisions.geojson')
+    fetch('red.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
         style: { color: "#e31a1c", fillOpacity: 0.5 },
