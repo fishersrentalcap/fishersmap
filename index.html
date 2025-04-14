@@ -42,11 +42,17 @@
               fillOpacity: feature.properties['fill-opacity'] || 0.5
             };
           },
-          onEachFeature: function (feature, layer) {
-            let name = feature.properties.SUBDIVISIO || feature.properties.MVP_SUBDIV;
-            let label = feature.properties.label || '';
-            layer.bindPopup(`<strong>${name}</strong><br>${label}`);
+      onEachFeature: function (feature, layer) {
+        let popupContent = "<table>";
+        for (const key in feature.properties) {
+          if (Object.hasOwnProperty.call(feature.properties, key)) {
+            const value = feature.properties[key];
+            popupContent += `<tr><th style="text-align:left;padding-right:8px">${key}</th><td>${value}</td></tr>`;
           }
+        }
+        popupContent += "</table>";
+        layer.bindPopup(popupContent);
+      }
         }).addTo(map);
       });
   </script>
