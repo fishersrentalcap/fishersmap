@@ -12,35 +12,26 @@
     body, html { margin: 0; padding: 0; height: 100%; }
     #map { height: 100%; width: 100%; }
 
-      .legend {
-    position: absolute;
-    bottom: 30px;
-    left: 10px;
-    padding: 10px;
-    background: white;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    line-height: 1.5;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  }
+    .legend {
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
 
-  .legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-  }
+    .legend i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <div class="legend" id="legend">
-  <strong>Subdivision Legend</strong><br>
-  <i style="background:#ff0000"></i> High Density<br>
-  <i style="background:#00ff00"></i> Medium Density<br>
-  <i style="background:#0000ff"></i> Low Density
-</div>
 
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -68,19 +59,33 @@
               fillOpacity: feature.properties['fill-opacity'] || 0.5
             };
           },
-      onEachFeature: function (feature, layer) {
-        let popupContent = "<table>";
-        for (const key in feature.properties) {
-          if (Object.hasOwnProperty.call(feature.properties, key)) {
-            const value = feature.properties[key];
-            popupContent += `<tr><th style="text-align:left;padding-right:8px">${key}</th><td>${value}</td></tr>`;
+          onEachFeature: function (feature, layer) {
+            let popupContent = "<table>";
+            for (const key in feature.properties) {
+              if (Object.hasOwnProperty.call(feature.properties, key)) {
+                const value = feature.properties[key];
+                popupContent += `<tr><th style="text-align:left;padding-right:8px">${key}</th><td>${value}</td></tr>`;
+              }
+            }
+            popupContent += "</table>";
+            layer.bindPopup(popupContent);
           }
-        }
-        popupContent += "</table>";
-        layer.bindPopup(popupContent);
-      }
         }).addTo(map);
       });
+
+    // Add legend using Leaflet control
+    const legend = L.control({ position: "bottomleft" });
+
+    legend.onAdd = function(map) {
+      const div = L.DomUtil.create("div", "legend");
+      div.innerHTML += "<strong>Subdivision Legend</strong><br>";
+      div.innerHTML += '<i style="background:#ff0000"></i> High Density<br>';
+      div.innerHTML += '<i style="background:#00ff00"></i> Medium Density<br>';
+      div.innerHTML += '<i style="background:#0000ff"></i> Low Density<br>';
+      return div;
+    };
+
+    legend.addTo(map);
   </script>
 </body>
 </html>
