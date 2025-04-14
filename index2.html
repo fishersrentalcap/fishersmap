@@ -44,42 +44,53 @@
     }).addTo(map);
 
     // Define empty LayerGroups
-    const landUseLayer = L.layerGroup();
-    const zoningLayer = L.layerGroup();
-    const subdivisionsLayer = L.layerGroup();
+    const greenLayer = L.layerGroup();
+    const redLayer = L.layerGroup();
+    const yellowLayer = L.layerGroup();
 
     // Load each dataset
     fetch('green.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
-        style: { color: "#33a02c", fillOpacity: 0.5 },
+        style: styleFromProperties,
         onEachFeature: bindPopup
-      }).addTo(landUseLayer));
-
-    fetch('yellow.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: { color: "#1f78b4", fillOpacity: 0.5 },
-        onEachFeature: bindPopup
-      }).addTo(zoningLayer));
+      }).addTo(greenLayer));
 
     fetch('red.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
-        style: { color: "#e31a1c", fillOpacity: 0.5 },
+        style: styleFromProperties,
         onEachFeature: bindPopup
-      }).addTo(subdivisionsLayer));
+      }).addTo(redLayer));
+
+    fetch('yellow.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(yellowLayer));
 
     // Add default visible layer
-    subdivisionsLayer.addTo(map);
+    yellowLayer.addTo(map);
 
-    // Layer control toggle
-    const overlays = {
-      "Land Use": landUseLayer,
-      "Zoning": zoningLayer,
-      "Subdivisions": subdivisionsLayer
+    // Base layer control (radio buttons)
+    const baseLayers = {
+      "Green": greenLayer,
+      "Red": redLayer,
+      "Yellow": yellowLayer
     };
-    L.control.layers(null, overlays, { collapsed: false }).addTo(map);
+    L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
+
+    // Use GeoJSON feature properties for styling
+    function styleFromProperties(feature) {
+      return {
+        color: feature.properties.stroke || '#000000',
+        weight: feature.properties['stroke-width'] || 1,
+        opacity: feature.properties['stroke-opacity'] || 1,
+        fillColor: feature.properties.fill || '#AAAAAA',
+        fillOpacity: feature.properties['fill-opacity'] || 0.5
+      };
+    }
 
     // Reusable popup builder
     function bindPopup(feature, layer) {
@@ -92,14 +103,14 @@
       layer.bindPopup(popupContent);
     }
 
-    // Optional: Legend (static)
+    // Legend
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
       div.innerHTML += "<strong>Legend</strong><br>";
-      div.innerHTML += '<i style="background:#33a02c"></i> Land Use<br>';
-      div.innerHTML += '<i style="background:#1f78b4"></i> Zoning<br>';
-      div.innerHTML += '<i style="background:#e31a1c"></i> Subdivisions<br>';
+      div.innerHTML += '<i style="background:#33a02c"></i> Green<br>';
+      div.innerHTML += '<i style="background:#e31a1c"></i> Red<br>';
+      div.innerHTML += '<i style="background:#ffff00"></i> Yellow<br>';
       div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       return div;
     };
