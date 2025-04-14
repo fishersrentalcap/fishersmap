@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Layer Map</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { height: 100%; width: 100%; }
+
+    .legend {
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .legend i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+  <script>
+    const map = L.map('map').setView([39.95, -86.0], 11);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Define empty LayerGroups
+    const landUseLayer = L.layerGroup();
+    const zoningLayer = L.layerGroup();
+    const subdivisionsLayer = L.layerGroup();
+
+    // Load each dataset
+    fetch('land_use.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: { color: "#33a02c", fillOpacity: 0.5 },
+        onEachFeature: bindPopup
+      }).addTo(landUseLayer));
+
+    fetch('zoning.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: { color: "#1f78b4", fillOpacity: 0.5 },
+        onEachFeature: bindPopup
+      }).addTo(zoningLayer));
+
+    fetch('subdivisions.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: { color: "#e31a1c", fillOpacity: 0.5 },
+        onEachFeature: bindPopup
+      }).addTo(subdivisionsLayer));
+
+    // Add default visible layer
+    subdivisionsLayer.addTo(map);
+
+    // Layer control toggle
+    const overlays = {
+      "Land Use": landUseLayer,
+      "Zoning": zoningLayer,
+      "Subdivisions": subdivisionsLayer
+    };
+    L.control.layers(null, overlays, { collapsed: false }).addTo(map);
+
+    // Reusable popup builder
+    function bindPopup(feature, layer) {
+      let popupContent = "<table>";
+      for (const key in feature.properties) {
+        const value = feature.properties[key];
+        popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
+      }
+      popupContent += "</table>";
+      layer.bindPopup(popupContent);
+    }
+
+    // Optional: Legend (static)
+    const legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function(map) {
+      const div = L.DomUtil.create("div", "legend");
+      div.innerHTML += "<strong>Legend</strong><br>";
+      div.innerHTML += '<i style="background:#33a02c"></i> Land Use<br>';
+      div.innerHTML += '<i style="background:#1f78b4"></i> Zoning<br>';
+      div.innerHTML += '<i style="background:#e31a1c"></i> Subdivisions<br>';
+      return div;
+    };
+    legend.addTo(map);
+  </script>
+</body>
+</html>
