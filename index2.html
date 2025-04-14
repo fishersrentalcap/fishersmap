@@ -33,9 +33,7 @@
 <body>
   <div id="map"></div>
 
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  ></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const map = L.map('map').setView([39.95, -86.0], 11);
 
@@ -43,78 +41,4 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Define empty LayerGroups
-    const greenLayer = L.layerGroup();
-    const redLayer = L.layerGroup();
-    const yellowLayer = L.layerGroup();
-
-    // Load each dataset
-    fetch('green.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(greenLayer));
-
-    fetch('red.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(redLayer));
-
-    fetch('yellow.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(yellowLayer));
-
-    // Add default visible layer
-    yellowLayer.addTo(map);
-
-    // Base layer control (radio buttons)
-    const baseLayers = {
-      "Green": greenLayer,
-      "Red": redLayer,
-      "Yellow": yellowLayer
-    };
-    L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
-
-    // Use GeoJSON feature properties for styling
-    function styleFromProperties(feature) {
-      return {
-        color: feature.properties.stroke || '#000000',
-        weight: feature.properties['stroke-width'] || 1,
-        opacity: feature.properties['stroke-opacity'] || 1,
-        fillColor: feature.properties.fill || '#AAAAAA',
-        fillOpacity: feature.properties['fill-opacity'] || 0.5
-      };
-    }
-
-    // Reusable popup builder
-    function bindPopup(feature, layer) {
-      let popupContent = "<table>";
-      for (const key in feature.properties) {
-        const value = feature.properties[key];
-        popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
-      }
-      popupContent += "</table>";
-      layer.bindPopup(popupContent);
-    }
-
-    // Legend
-    const legend = L.control({ position: "bottomleft" });
-    legend.onAdd = function(map) {
-      const div = L.DomUtil.create("div", "legend");
-      div.innerHTML += "<strong>Legend</strong><br>";
-      div.innerHTML += '<i style="background:#33a02c"></i> Green<br>';
-      div.innerHTML += '<i style="background:#e31a1c"></i> Red<br>';
-      div.innerHTML += '<i style="background:#ffff00"></i> Yellow<br>';
-      div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
-      return div;
-    };
-    legend.addTo(map);
-  </script>
-</body>
-</html>
+    // Define LayerGroups
