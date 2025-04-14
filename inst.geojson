@@ -737,7 +737,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -1503,7 +1503,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -1629,7 +1629,7 @@
         "Percent Inst Rentals": "12%",
         "Category Name": "HIGH",
         "fill": "#FF704D",
-        "stroke": "#FF704D",
+        "stroke": "#B24E35",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -1771,7 +1771,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -1925,7 +1925,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -2067,7 +2067,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -2337,7 +2337,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -2643,7 +2643,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -2929,7 +2929,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -3223,7 +3223,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -3453,7 +3453,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -3723,7 +3723,7 @@
         "Percent Inst Rentals": "8%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -6303,7 +6303,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -6669,7 +6669,7 @@
         "Percent Inst Rentals": "11%",
         "Category Name": "HIGH",
         "fill": "#FF704D",
-        "stroke": "#FF704D",
+        "stroke": "#B24E35",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -7123,7 +7123,7 @@
         "Percent Inst Rentals": "11%",
         "Category Name": "HIGH",
         "fill": "#FF704D",
-        "stroke": "#FF704D",
+        "stroke": "#B24E35",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -7565,7 +7565,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -10495,7 +10495,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -11233,7 +11233,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -14313,7 +14313,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -14815,7 +14815,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -15397,7 +15397,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -15895,7 +15895,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -16081,7 +16081,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -16239,7 +16239,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -16365,7 +16365,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -16775,7 +16775,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -17213,7 +17213,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -17503,7 +17503,7 @@
         "Percent Inst Rentals": "6%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -17801,7 +17801,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -17963,7 +17963,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -18229,7 +18229,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -18451,7 +18451,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -18717,7 +18717,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -18983,7 +18983,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -19445,7 +19445,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -20143,7 +20143,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -20473,7 +20473,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -20683,7 +20683,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -21089,7 +21089,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -28047,7 +28047,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -28269,7 +28269,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -28599,7 +28599,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -28737,7 +28737,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -29071,7 +29071,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -29597,7 +29597,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -29961,7 +29961,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -30327,7 +30327,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -30589,7 +30589,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -31345,7 +31345,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -31447,7 +31447,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -31621,7 +31621,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -31871,7 +31871,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -32205,7 +32205,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -32747,7 +32747,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -33865,7 +33865,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -34223,7 +34223,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -34565,7 +34565,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -35115,7 +35115,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -35225,7 +35225,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -35471,7 +35471,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -35813,7 +35813,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -37131,7 +37131,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -37621,7 +37621,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -37779,7 +37779,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -38009,7 +38009,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -38307,7 +38307,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -38437,7 +38437,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -38815,7 +38815,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -39085,7 +39085,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -39387,7 +39387,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -39513,7 +39513,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -40095,7 +40095,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -40241,7 +40241,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -40467,7 +40467,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -41009,7 +41009,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -41591,7 +41591,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -41985,7 +41985,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -42203,7 +42203,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -42661,7 +42661,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -43135,7 +43135,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -43405,7 +43405,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -43911,7 +43911,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -44125,7 +44125,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -44439,7 +44439,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -44681,7 +44681,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -45107,7 +45107,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -45285,7 +45285,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -45547,7 +45547,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -46089,7 +46089,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -46603,7 +46603,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -47197,7 +47197,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -47819,7 +47819,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -48193,7 +48193,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -48659,7 +48659,7 @@
         "Percent Inst Rentals": "9%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -48865,7 +48865,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -49623,7 +49623,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -50265,7 +50265,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -50751,7 +50751,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -51083,7 +51083,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -51389,7 +51389,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -51743,7 +51743,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -52053,7 +52053,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -52347,7 +52347,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -52749,7 +52749,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -53283,7 +53283,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -53513,7 +53513,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -53895,7 +53895,7 @@
         "Percent Inst Rentals": "6%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -54465,7 +54465,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -54903,7 +54903,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -55377,7 +55377,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -55847,7 +55847,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -56125,7 +56125,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -56403,7 +56403,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -56929,7 +56929,7 @@
         "Percent Inst Rentals": "6%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -57259,7 +57259,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -57561,7 +57561,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -57879,7 +57879,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -59009,7 +59009,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -59439,7 +59439,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -59877,7 +59877,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -61011,7 +61011,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -61389,7 +61389,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -61703,7 +61703,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -62141,7 +62141,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -62507,7 +62507,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -62821,7 +62821,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -63263,7 +63263,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -63413,7 +63413,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -63587,7 +63587,7 @@
         "Percent Inst Rentals": "8%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -63965,7 +63965,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -64223,7 +64223,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -64637,7 +64637,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -69569,7 +69569,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -70023,7 +70023,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -70545,7 +70545,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -70863,7 +70863,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -71133,7 +71133,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -71431,7 +71431,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -72097,7 +72097,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -72503,7 +72503,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -72957,7 +72957,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -73295,7 +73295,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -73673,7 +73673,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -73895,7 +73895,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -74157,7 +74157,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -74399,7 +74399,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -74669,7 +74669,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -75151,7 +75151,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -75361,7 +75361,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -75591,7 +75591,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -75957,7 +75957,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -76091,7 +76091,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -76373,7 +76373,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -77179,7 +77179,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -77465,7 +77465,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -77587,7 +77587,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -77805,7 +77805,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -77951,7 +77951,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -78387,7 +78387,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -78669,7 +78669,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -79379,7 +79379,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -79793,7 +79793,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -80415,7 +80415,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -80513,7 +80513,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -80663,7 +80663,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -80897,7 +80897,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -81159,7 +81159,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -81437,7 +81437,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -81643,7 +81643,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -81997,7 +81997,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -82139,7 +82139,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -82289,7 +82289,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -82467,7 +82467,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -83373,7 +83373,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -83853,7 +83853,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -84801,7 +84801,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -85099,7 +85099,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -85629,7 +85629,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -85759,7 +85759,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -86013,7 +86013,7 @@
         "Percent Inst Rentals": "15%",
         "Category Name": "VERY HIGH",
         "fill": "#E60000",
-        "stroke": "#E60000",
+        "stroke": "#A10000",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -86499,7 +86499,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -86851,7 +86851,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -87145,7 +87145,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -87527,7 +87527,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -87881,7 +87881,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -88055,7 +88055,7 @@
         "Percent Inst Rentals": "7%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -88457,7 +88457,7 @@
         "Percent Inst Rentals": "8%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -88847,7 +88847,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -88985,7 +88985,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -89343,7 +89343,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -89917,7 +89917,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -90451,7 +90451,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -91029,7 +91029,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -91547,7 +91547,7 @@
         "Percent Inst Rentals": "20%",
         "Category Name": "VERY HIGH",
         "fill": "#E60000",
-        "stroke": "#E60000",
+        "stroke": "#A10000",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -91885,7 +91885,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -92361,7 +92361,7 @@
         "Percent Inst Rentals": "5%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -92965,7 +92965,7 @@
         "Percent Inst Rentals": "6%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -93491,7 +93491,7 @@
         "Percent Inst Rentals": "6%",
         "Category Name": "MODERATE",
         "fill": "#FFB347",
-        "stroke": "#FFB347",
+        "stroke": "#B27D31",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -94437,7 +94437,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -94963,7 +94963,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -95285,7 +95285,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -95463,7 +95463,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -95873,7 +95873,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -96367,7 +96367,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -96621,7 +96621,7 @@
         "Percent Inst Rentals": "2%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -96971,7 +96971,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -97585,7 +97585,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -97863,7 +97863,7 @@
         "Percent Inst Rentals": "4%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -98153,7 +98153,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -98487,7 +98487,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -98809,7 +98809,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -99315,7 +99315,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -99721,7 +99721,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -100171,7 +100171,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -100629,7 +100629,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -101163,7 +101163,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -101445,7 +101445,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -101623,7 +101623,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -102041,7 +102041,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -102479,7 +102479,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -103073,7 +103073,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -103639,7 +103639,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -104065,7 +104065,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -104547,7 +104547,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -105205,7 +105205,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -105383,7 +105383,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -105561,7 +105561,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -105683,7 +105683,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -106069,7 +106069,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -106199,7 +106199,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -106421,7 +106421,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -106895,7 +106895,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -107181,7 +107181,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -107315,7 +107315,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -107749,7 +107749,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -108115,7 +108115,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -108539,7 +108539,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -108881,7 +108881,7 @@
         "Percent Inst Rentals": "1%",
         "Category Name": "VERY LOW",
         "fill": "#A8E6A3",
-        "stroke": "#A8E6A3",
+        "stroke": "#75A172",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -109159,7 +109159,7 @@
         "Percent Inst Rentals": "3%",
         "Category Name": "LOW",
         "fill": "#D6E685",
-        "stroke": "#D6E685",
+        "stroke": "#95A15D",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -109897,7 +109897,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -110103,7 +110103,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -110253,7 +110253,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -110407,7 +110407,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -110593,7 +110593,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -110887,7 +110887,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -111361,7 +111361,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -111435,7 +111435,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -111549,7 +111549,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -111957,7 +111957,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
@@ -112261,7 +112261,7 @@
         "Percent Inst Rentals": "0%",
         "Category Name": "NONE",
         "fill": "#CCCCCC",
-        "stroke": "#CCCCCC",
+        "stroke": "#8E8E8E",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill-opacity": 0.5
