@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subdivision Map</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2Yu2OV+2LBBfG3XHvTfzS3gkOgEUaYZoM4y+R38="
+    crossorigin=""
+  />
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { height: 100%; width: 100%; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1jJkM9jGLp5gRHGd33N1gU5ZGdGh4MlU0j6YfJtk="
+    crossorigin=""
+  ></script>
+  <script>
+    // Initialize map
+    const map = L.map('map').setView([39.95, -86.0], 11);
+
+    // Add basemap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Load GeoJSON
+    fetch('styled_filtered_subdivisions.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: function(feature) {
+            return {
+              color: feature.properties.stroke || '#000000',
+              weight: feature.properties['stroke-width'] || 1,
+              opacity: feature.properties['stroke-opacity'] || 1,
+              fillColor: feature.properties.fill || '#AAAAAA',
+              fillOpacity: feature.properties['fill-opacity'] || 0.5
+            };
+          },
+          onEachFeature: function (feature, layer) {
+            let name = feature.properties.SUBDIVISIO || feature.properties.MVP_SUBDIV;
+            let label = feature.properties.label || '';
+            layer.bindPopup(`<strong>${name}</strong><br>${label}`);
+          }
+        }).addTo(map);
+      });
+  </script>
+</body>
+</html>
