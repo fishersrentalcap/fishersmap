@@ -42,3 +42,77 @@
     }).addTo(map);
 
     // Define LayerGroups
+    const greenLayer = L.layerGroup();
+    const redLayer = L.layerGroup();
+    const instLayer = L.layerGroup(); // was yellowLayer
+
+    // Load each dataset
+    fetch('green.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(greenLayer));
+
+    fetch('red.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(redLayer));
+
+    fetch('inst.geojson')  // new file
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(instLayer));
+
+    // Add default visible layer
+    instLayer.addTo(map);
+
+    // Base layer control
+    const baseLayers = {
+      "Green": greenLayer,
+      "Red": redLayer,
+      "Institutional Rentals": instLayer
+    };
+    L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
+
+    // Feature style
+    function styleFromProperties(feature) {
+      return {
+        color: feature.properties.stroke || '#000000',
+        weight: feature.properties['stroke-width'] || 1,
+        opacity: feature.properties['stroke-opacity'] || 1,
+        fillColor: feature.properties.fill || '#AAAAAA',
+        fillOpacity: feature.properties['fill-opacity'] || 0.5
+      };
+    }
+
+    // Popups
+    function bindPopup(feature, layer) {
+      let popupContent = "<table>";
+      for (const key in feature.properties) {
+        const value = feature.properties[key];
+        popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
+      }
+      popupContent += "</table>";
+      layer.bindPopup(popupContent);
+    }
+
+    // Legend
+    const legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function(map) {
+      const div = L.DomUtil.create("div", "legend");
+      div.innerHTML += "<strong>Legend</strong><br>";
+      div.innerHTML += '<i style="background:#33a02c"></i> Green<br>';
+      div.innerHTML += '<i style="background:#e31a1c"></i> Red<br>';
+      div.innerHTML += '<i style="background:#ffff00"></i> Institutional Rentals<br>';
+      div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
+      return div;
+    };
+    legend.addTo(map);
+  </script>
+</body>
+</html>
