@@ -28,10 +28,41 @@
       margin-right: 8px;
       opacity: 0.7;
     }
+
+    .popup-overlay {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: none;
+    }
+
+    .popup-overlay h3 {
+      margin-top: 0;
+    }
+
+    .popup-overlay button {
+      display: block;
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
+  <div id="popup" class="popup-overlay">
+    <h3>Data Definitions</h3>
+    <p><strong>Estimated Rentals:</strong> Percentage of homes suspected to be rental properties based on property characteristics.</p>
+    <p><strong>Institutional Rentals:</strong> Homes owned by entities classified as institutional investors.</p>
+    <p><strong>Eligible for New Rentals:</strong> Subdivisions currently under the rental cap and therefore eligible for additional rental permits.</p>
+    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
@@ -41,12 +72,10 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Define LayerGroups
     const rentLayer = L.layerGroup();
     const redLayer = L.layerGroup();
     const instLayer = L.layerGroup();
 
-    // Load each dataset
     fetch('rent.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
@@ -68,10 +97,8 @@
         onEachFeature: bindPopup
       }).addTo(instLayer));
 
-    // Add default visible layer
     rentLayer.addTo(map);
 
-    // Base layer control
     const baseLayers = {
       "Estimated Rentals": rentLayer,
       "Eligible for New Rentals": redLayer,
@@ -79,7 +106,6 @@
     };
     L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
-    // Feature style
     function styleFromProperties(feature) {
       return {
         color: feature.properties.stroke || '#000000',
@@ -90,7 +116,6 @@
       };
     }
 
-    // Popups
     function bindPopup(feature, layer) {
       let popupContent = "<table>";
       for (const key in feature.properties) {
@@ -101,7 +126,6 @@
       layer.bindPopup(popupContent);
     }
 
-    // Dynamic Legend
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
@@ -135,16 +159,11 @@
         div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
         div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
       }
-      div.innerHTML += '<br><small><a href="#" onclick="showDefinitionsPopup(); return false;">View data definitions</a><br>';
+      div.innerHTML += '<br><small><a href="#" onclick="document.getElementById(\'popup\').style.display=\'block\'">View data definitions</a><br>';
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
 
-    function showDefinitionsPopup() {
-      alert("Definitions:\n\nEstimated Rentals: % of homes suspected to be rental properties.\nInstitutional Rentals: Properties owned by institutional investors.\nEligible for New Rentals: Subdivisions below the rental cap threshold.");
-    }
-
     updateLegend("Estimated Rentals");
-
     map.on('baselayerchange', function(e) {
       updateLegend(e.name);
     });
