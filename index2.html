@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fishers Rental Cap - Interactive Map</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     body, html { margin: 0; padding: 0; height: 100%; }
     #map { height: 100%; width: 100%; }
@@ -25,8 +22,9 @@
     }
 
     .legend.collapsed {
-      max-height: 24px;
+      max-height: 30px;
       padding-bottom: 4px;
+      overflow: hidden;
     }
 
     .legend-toggle {
@@ -49,10 +47,13 @@
 
     .popup-overlay {
       position: absolute;
-      top: 20%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
-      width: 320px;
+      width: 90%;
+      max-width: 400px;
+      max-height: 70%;
+      overflow-y: auto;
       background: white;
       border: 1px solid #ccc;
       padding: 15px;
@@ -72,6 +73,12 @@
       display: block;
       margin-top: 10px;
       padding: 5px 10px;
+    }
+
+    @media (max-width: 600px) {
+      .legend {
+        max-height: 30px;
+      }
     }
   </style>
 </head>
@@ -159,7 +166,7 @@
 
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
-      const div = L.DomUtil.create("div", "legend");
+      const div = L.DomUtil.create("div", "legend collapsed");
       div.innerHTML = '<div id="legend-content"></div><div class="legend-toggle" onclick="toggleLegend()">Toggle Legend</div>';
       return div;
     };
