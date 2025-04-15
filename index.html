@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5GBBZYNE7S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5GBBZYNE7S');
   </script>
   <meta charset="UTF-8" />
@@ -80,11 +78,11 @@
       <li>The owner mailing address does not match the property address</li>
       <li>There is no active homestead exemption on file</li>
     </ul>
-    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential. Properties are identified as institutionally owned based on either the owner mailing address listed with the county or the principal address of the corporate entity as filed with the Indiana Secretary of State.</p>
-    <p><strong>HOA Rental Caps:</strong> Information on rental restrictions was obtained from the recorded Declaration of Covenants or amended Covenants for each homeowners association, as filed with the Hamilton County Recorder’s Office.</p>
-    <p><strong>To submit a correction or update,</strong> please contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
+    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential.</p>
+    <p><strong>HOA Rental Caps:</strong> Information was obtained from recorded Covenants or amended Covenants filed with the Hamilton County Recorder’s Office.</p>
+    <p><strong>To submit a correction or update,</strong> contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
     <p><strong>Disclaimer:</strong><br>
-    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties, nor has it released supporting details for the rental property figures shared during public presentations of the Rental Registration and Permitting Program.</p>
+    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties or to disclose methodology used in public presentations of the Rental Registration and Permitting Program.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
@@ -107,7 +105,6 @@
         onEachFeature: bindPopup
       }).addTo(rentLayer));
 
-    // Red layer data not yet available
     fetch('inst.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
@@ -115,32 +112,19 @@
         onEachFeature: bindPopup
       }).addTo(instLayer));
 
-    rentLayer.addTo(map);
+    fetch('hoa.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(redLayer));
 
     const baseLayers = {
       "Total Estimated Rentals": rentLayer,
       "Institutional Rentals": instLayer,
-      "Eligible for New Rentals": redLayer
+      "HOA Rental Restrictions": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
-
-// Add Show Legend checkbox directly under layer options
-setTimeout(() => {
-  const controls = document.querySelectorAll('.leaflet-control-layers-base input');
-  const lastItem = controls[controls.length - 1]?.parentElement;
-  if (lastItem) {
-    const legendLabel = document.createElement('label');
-    legendLabel.style.fontSize = '13px';
-    legendLabel.style.marginTop = '6px';
-    legendLabel.style.display = 'block';
-    legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
-    lastItem.parentElement.appendChild(legendLabel);
-    document.getElementById("toggle-legend").addEventListener("change", () => {
-      const legendBox = document.querySelector(".legend");
-      legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
-    });
-  }
-}, 0);
 
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
@@ -150,6 +134,39 @@ setTimeout(() => {
       return div;
     };
     legend.addTo(map);
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const defaultLayerName = getQueryParam("layer");
+    const defaultLayer = baseLayers[defaultLayerName];
+
+    if (defaultLayer) {
+      map.addLayer(defaultLayer);
+      updateLegend(defaultLayerName);
+    } else {
+      map.addLayer(rentLayer);
+      updateLegend("Total Estimated Rentals");
+    }
+
+    setTimeout(() => {
+      const controls = document.querySelectorAll('.leaflet-control-layers-base input');
+      const lastItem = controls[controls.length - 1]?.parentElement;
+      if (lastItem) {
+        const legendLabel = document.createElement('label');
+        legendLabel.style.fontSize = '13px';
+        legendLabel.style.marginTop = '6px';
+        legendLabel.style.display = 'block';
+        legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
+        lastItem.parentElement.appendChild(legendLabel);
+        document.getElementById("toggle-legend").addEventListener("change", () => {
+          const legendBox = document.querySelector(".legend");
+          legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
+        });
+      }
+    }, 100); // Delay to ensure DOM is ready
 
     function styleFromProperties(feature) {
       return {
@@ -185,8 +202,11 @@ setTimeout(() => {
         div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
         div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
         div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
-      } else if (layerName === "Eligible for New Rentals") {
-        div.innerHTML = "<strong>Eligible for New Rentals</strong><br><em>(Coming Soon)</em><br>";
+      } else if (layerName === "HOA Rental Restrictions") {
+        div.innerHTML = "<strong>HOA Rental Restrictions</strong><br>";
+        div.innerHTML += '<i style="background:#FFD700"></i> Under 10% Rentals (no HOA restriction)<br>';
+        div.innerHTML += '<i style="background:#6699CC"></i> HOA with Rental Cap<br>';
+        div.innerHTML += '<i style="background:#FFFF66"></i> Over 10% Rentals (no HOA restriction)<br>';
       } else if (layerName === "Institutional Rentals") {
         div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
@@ -200,9 +220,11 @@ setTimeout(() => {
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
 
-    updateLegend("Total Estimated Rentals");
     map.on('baselayerchange', function(e) {
       updateLegend(e.name);
+      const url = new URL(window.location);
+      url.searchParams.set('layer', e.name);
+      window.history.replaceState({}, '', url);
     });
   </script>
 </body>
