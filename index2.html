@@ -174,8 +174,8 @@
 
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
-      const div = L.DomUtil.create("div", "legend collapsed");
-      div.innerHTML = '<div class="legend-toggle" onclick="toggleLegend()">&#x25BC;</div><div id="legend-content"></div>';
+      const div = L.DomUtil.create("div", "legend");
+      div.innerHTML = '<div class="legend-toggle" onclick="toggleLegend()">&#x25B2;</div><div id="legend-content"></div>';
       return div;
     };
     legend.addTo(map);
