@@ -123,19 +123,18 @@
 layerControl.addTo(map);
 
 // Add legend checkbox to the layer control
-setTimeout(() => {
-  const controls = document.querySelectorAll('.leaflet-control-layers-base input');
-  const lastItem = controls[controls.length - 1]?.parentElement;
-  if (lastItem) {
-    const legendLabel = document.createElement('label');
-    legendLabel.style.fontSize = '13px';
-    legendLabel.style.marginTop = '6px';
-    legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
-    lastItem.parentElement.appendChild(legendLabel);
-    document.getElementById("toggle-legend").addEventListener("change", () => {
-      const legendBox = document.querySelector(".legend");
-      legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
-    });
+const layerControlContainer = document.querySelector('.leaflet-control-layers-list');
+if (layerControlContainer) {
+  const legendLabel = document.createElement('label');
+  legendLabel.style.fontSize = '13px';
+  legendLabel.style.marginTop = '6px';
+  legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
+  layerControlContainer.appendChild(legendLabel);
+  document.getElementById("toggle-legend").addEventListener("change", () => {
+    const legendBox = document.querySelector(".legend");
+    if (legendBox) legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
+  });
+}
   }
 }, 0);
 
@@ -163,30 +162,15 @@ setTimeout(() => {
     const legend = L.control({ position: "bottomleft" });
 legend.onAdd = function(map) {
   const div = L.DomUtil.create("div", "legend");
+  div.id = "legend-box";
   div.innerHTML = '<div id="legend-content"></div>';
   return div;
 };
 
 
-map.on("layeradd", () => updateLegendVisibility());
-map.on("layerremove", () => updateLegendVisibility());
-
-function updateLegendVisibility() {
-  const checkbox = document.getElementById("toggle-legend");
-  const legendBox = document.querySelector(".legend");
-  if (checkbox && legendBox) {
-    legendBox.style.display = checkbox.checked ? "block" : "none";
-  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const checkbox = document.getElementById("toggle-legend");
-  const legendBox = document.querySelector(".legend");
-  if (checkbox && legendBox) {
-    checkbox.addEventListener("change", () => {
-      legendBox.style.display = checkbox.checked ? "block" : "none";
-    });
-    legendBox.style.display = "block";
+legendBox.style.display = "block";
   }
 });
 
