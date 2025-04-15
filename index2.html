@@ -118,9 +118,9 @@
     rentLayer.addTo(map);
 
     const baseLayers = {
-      "Estimated Rentals": rentLayer,
-      "Eligible for New Rentals": redLayer,
-      "Institutional Rentals": instLayer
+      "Total Estimated Rentals": rentLayer,
+      "Institutional Rentals": instLayer,
+      "Eligible for New Rentals": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
@@ -174,7 +174,7 @@ setTimeout(() => {
 
     function updateLegend(layerName) {
       const div = document.querySelector('#legend-content');
-      if (layerName === "Estimated Rentals") {
+      if (layerName === "Total Estimated Rentals") {
         div.innerHTML = "<strong>Estimated Rental Saturation</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
         div.innerHTML += '<i style="background:#C2F0C2"></i> Very Low Rentals (1–2%)<br>';
