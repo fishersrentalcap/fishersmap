@@ -1,3 +1,4 @@
+<!-- Full HTML file with "HOA Rental Restrictions" as the updated layer name -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5GBBZYNE7S');
   </script>
   <meta charset="UTF-8" />
@@ -126,7 +126,7 @@
     const baseLayers = {
       "Total Estimated Rentals": rentLayer,
       "Institutional Rentals": instLayer,
-      "Eligible for New Rentals": redLayer
+      "HOA Rental Restrictions": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
@@ -190,8 +190,8 @@
         div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
         div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
         div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
-      } else if (layerName === "Eligible for New Rentals") {
-        div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
+      } else if (layerName === "HOA Rental Restrictions") {
+        div.innerHTML = "<strong>HOA Rental Restrictions</strong><br>";
         div.innerHTML += '<i style="background:#FFFF66"></i> Unregulated (no HOA restriction)<br>';
         div.innerHTML += '<i style="background:#6699CC"></i> HOA with Rental Cap<br>';
         div.innerHTML += '<i style="background:#FFD700"></i> Over 10% Already<br>';
