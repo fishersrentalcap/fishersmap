@@ -17,31 +17,9 @@
       line-height: 1.5;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
       max-width: 260px;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      overflow: hidden;
+      max-height: 200px;
+      overflow-y: auto;
       position: relative;
-    }
-
-    .legend.collapsed {
-      max-height: 34px;
-      padding-bottom: 4px;
-    }
-
-    .legend-toggle {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      width: 20px;
-      height: 20px;
-      line-height: 18px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-      background: #eaeaea;
-      border: 1px solid #999;
-      border-radius: 3px;
-      cursor: pointer;
-      z-index: 1001;
     }
 
     .legend i {
@@ -80,13 +58,6 @@
       display: block;
       margin-top: 10px;
       padding: 5px 10px;
-    }
-
-    @media (max-width: 600px) {
-      .legend {
-        max-height: 34px;
-        padding-bottom: 4px;
-      }
     }
   </style>
 </head>
@@ -175,17 +146,10 @@
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
-      div.innerHTML = '<div class="legend-toggle" onclick="toggleLegend()">&#x25B2;</div><div id="legend-content"></div>';
+      div.innerHTML = '<div id="legend-content"></div>';
       return div;
     };
     legend.addTo(map);
-
-    function toggleLegend() {
-      const legend = document.querySelector('.legend');
-      legend.classList.toggle('collapsed');
-      const icon = document.querySelector('.legend-toggle');
-      icon.innerHTML = legend.classList.contains('collapsed') ? '&#x25BC;' : '&#x25B2;';
-    }
 
     function updateLegend(layerName) {
       const div = document.querySelector('#legend-content');
