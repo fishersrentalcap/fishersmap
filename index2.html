@@ -34,17 +34,20 @@
       top: 20%;
       left: 50%;
       transform: translateX(-50%);
-      width: 300px;
+      width: 320px;
       background: white;
       border: 1px solid #ccc;
       padding: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 1000;
       display: none;
+      font-size: 14px;
+      line-height: 1.4;
     }
 
     .popup-overlay h3 {
       margin-top: 0;
+      font-size: 16px;
     }
 
     .popup-overlay button {
@@ -57,10 +60,19 @@
 <body>
   <div id="map"></div>
   <div id="popup" class="popup-overlay">
-    <h3>Data Definitions</h3>
-    <p><strong>Estimated Rentals:</strong> Percentage of homes suspected to be rental properties based on property characteristics.</p>
-    <p><strong>Institutional Rentals:</strong> Homes owned by entities classified as institutional investors.</p>
-    <p><strong>Eligible for New Rentals:</strong> Subdivisions currently under the rental cap and therefore eligible for additional rental permits.</p>
+    <h3>Data Sources & Definitions</h3>
+    <p><strong>Property Records:</strong> Data was extracted from the Hamilton County Property Records Database as of January 2025.</p>
+    <p><strong>Subdivision Boundaries:</strong> Shape files were sourced from the Hamilton County GIS GeoHub. Each shape represents a subdivision based on platted land boundaries.</p>
+    <p><strong>Estimated Rentals:</strong> Properties are classified as rentals if they meet both of the following criteria:</p>
+    <ul>
+      <li>The owner mailing address does not match the property address</li>
+      <li>There is no active homestead exemption on file</li>
+    </ul>
+    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential. Properties are identified as institutionally owned based on either the owner mailing address listed with the county or the principal address of the corporate entity as filed with the Indiana Secretary of State.</p>
+    <p><strong>HOA Rental Caps:</strong> Information on rental restrictions was obtained from the recorded Declaration of Covenants or amended Covenants for each homeowners association, as filed with the Hamilton County Recorder’s Office.</p>
+    <p><strong>To submit a correction or update,</strong> please contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
+    <p><strong>Disclaimer:</strong><br>
+    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties, nor has it released supporting details for the rental property figures shared during public presentations of the Rental Registration and Permitting Program.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
