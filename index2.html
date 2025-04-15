@@ -19,6 +19,24 @@
       font-size: 14px;
       line-height: 1.5;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      max-width: 260px;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+    }
+
+    .legend.collapsed {
+      max-height: 24px;
+      padding-bottom: 4px;
+    }
+
+    .legend-toggle {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 2px 6px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 5px;
+      display: inline-block;
     }
 
     .legend i {
@@ -142,13 +160,18 @@
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
-      div.innerHTML = "";
+      div.innerHTML = '<div id="legend-content"></div><div class="legend-toggle" onclick="toggleLegend()">Toggle Legend</div>';
       return div;
     };
     legend.addTo(map);
 
+    function toggleLegend() {
+      const legend = document.querySelector('.legend');
+      legend.classList.toggle('collapsed');
+    }
+
     function updateLegend(layerName) {
-      const div = document.querySelector('.legend');
+      const div = document.querySelector('#legend-content');
       if (layerName === "Estimated Rentals") {
         div.innerHTML = "<strong>Estimated Rental Saturation</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
