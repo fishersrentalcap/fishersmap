@@ -180,9 +180,14 @@ function updateLegendVisibility() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("toggle-legend").addEventListener("change", () => {
-    updateLegendVisibility();
-  });
+  const checkbox = document.getElementById("toggle-legend");
+  const legendBox = document.querySelector(".legend");
+  if (checkbox && legendBox) {
+    checkbox.addEventListener("change", () => {
+      legendBox.style.display = checkbox.checked ? "block" : "none";
+    });
+    legendBox.style.display = "block";
+  }
 });
 
 
