@@ -135,7 +135,12 @@
         div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
         div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
       }
-      div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
+      div.innerHTML += '<br><small><a href="#" onclick="showDefinitionsPopup(); return false;">View data definitions</a><br>';
+      div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
+    }
+
+    function showDefinitionsPopup() {
+      alert("Definitions:\n\nEstimated Rentals: % of homes suspected to be rental properties.\nInstitutional Rentals: Properties owned by institutional investors.\nEligible for New Rentals: Subdivisions below the rental cap threshold.");
     }
 
     updateLegend("Estimated Rentals");
