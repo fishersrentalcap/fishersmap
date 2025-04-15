@@ -119,6 +119,7 @@
     function bindPopup(feature, layer) {
       let popupContent = "<table>";
       for (const key in feature.properties) {
+        if (["fill", "stroke", "stroke-width", "stroke-opacity", "fill-opacity"].includes(key)) continue;
         const value = feature.properties[key];
         popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
       }
