@@ -137,7 +137,7 @@
     function bindPopup(feature, layer) {
       let popupContent = "<table>";
       for (const key in feature.properties) {
-        if (["fill", "stroke", "stroke-width", "stroke-opacity", "fill-opacity"].includes(key)) continue;
+        if (["fill", "stroke", "stroke-width", "stroke-opacity", "fill-opacity", "GlobalID", "MVP_SUBDIV"].includes(key)) continue;
         const value = feature.properties[key];
         popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
       }
@@ -146,12 +146,32 @@
     }
 
     const legend = L.control({ position: "bottomleft" });
-    legend.onAdd = function(map) {
-      const div = L.DomUtil.create("div", "legend");
-      div.innerHTML = '<div id="legend-content"></div>';
-      return div;
-    };
-    legend.addTo(map);
+legend.onAdd = function(map) {
+  const div = L.DomUtil.create("div", "legend");
+  div.innerHTML = '<div id="legend-content"></div>';
+  return div;
+};
+
+const legendToggle = L.control({ position: "topright" });
+legendToggle.onAdd = function(map) {
+  const div = L.DomUtil.create("div", "legend-toggle");
+  div.innerHTML = '<button id="toggle-legend" style="padding:4px 10px;margin:10px;font-size:13px;">Toggle Legend</button>';
+  return div;
+};
+
+legend.addTo(map);
+legendToggle.addTo(map);
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("toggle-legend").addEventListener("click", () => {
+    const legendBox = document.querySelector(".legend");
+    if (legendBox.style.display === "none") {
+      legendBox.style.display = "block";
+    } else {
+      legendBox.style.display = "none";
+    }
+  });
+});
 
     function updateLegend(layerName) {
       const div = document.querySelector('#legend-content');
