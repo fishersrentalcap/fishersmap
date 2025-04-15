@@ -119,7 +119,25 @@
       "Eligible for New Rentals": redLayer,
       "Institutional Rentals": instLayer
     };
-    L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
+    const layerControl = L.control.layers(baseLayers, null, { collapsed: false });
+layerControl.addTo(map);
+
+// Add legend checkbox to the layer control
+setTimeout(() => {
+  const controls = document.querySelectorAll('.leaflet-control-layers-base input');
+  const lastItem = controls[controls.length - 1]?.parentElement;
+  if (lastItem) {
+    const legendLabel = document.createElement('label');
+    legendLabel.style.fontSize = '13px';
+    legendLabel.style.marginTop = '6px';
+    legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
+    lastItem.parentElement.appendChild(legendLabel);
+    document.getElementById("toggle-legend").addEventListener("change", () => {
+      const legendBox = document.querySelector(".legend");
+      legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
+    });
+  }
+}, 0);
 
     function styleFromProperties(feature) {
       return {
@@ -149,13 +167,6 @@ legend.onAdd = function(map) {
   return div;
 };
 
-const legendToggle = L.control({ position: "topright" });
-legendToggle.onAdd = function(map) {
-  const container = L.DomUtil.create("div", "legend-toggle");
-  container.innerHTML = '<label style="font-size:13px;margin:10px;display:block;"><input type="checkbox" id="toggle-legend" checked> Show Legend</label>';
-  return container;
-};
-legendToggle.addTo(map);
 
 map.on("layeradd", () => updateLegendVisibility());
 map.on("layerremove", () => updateLegendVisibility());
@@ -174,16 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("toggle-legend").addEventListener("click", () => {
-    const legendBox = document.querySelector(".legend");
-    if (legendBox.style.display === "none") {
-      legendBox.style.display = "block";
-    } else {
-      legendBox.style.display = "none";
-    }
-  });
-});
 
     function updateLegend(layerName) {
       const div = document.querySelector('#legend-content');
