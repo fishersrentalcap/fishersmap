@@ -97,8 +97,9 @@
     }).addTo(map);
 
     const rentLayer = L.layerGroup();
-    const redLayer = L.layerGroup();
-    const instLayer = L.layerGroup();
+const redLayer = L.layerGroup();
+const instLayer = L.layerGroup();
+const hoaLayer = L.layerGroup();
 
     fetch('rent.geojson')
       .then(res => res.json())
@@ -115,11 +116,19 @@
         onEachFeature: bindPopup
       }).addTo(instLayer));
 
+    fetch('hoa.geojson')
+      .then(res => res.json())
+      .then(data => L.geoJSON(data, {
+        style: styleFromProperties,
+        onEachFeature: bindPopup
+      }).addTo(hoaLayer));
+
     rentLayer.addTo(map);
 
     const baseLayers = {
       "Total Estimated Rentals": rentLayer,
       "Institutional Rentals": instLayer,
+      "HOA Rental Restrictions": hoaLayer,
       "Eligible for New Rentals": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
@@ -188,14 +197,18 @@ setTimeout(() => {
       } else if (layerName === "Eligible for New Rentals") {
         div.innerHTML = "<strong>Eligible for New Rentals</strong><br><em>(Coming Soon)</em><br>";
       } else if (layerName === "Institutional Rentals") {
-        div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
-        div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
-        div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
-        div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
-        div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
-        div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
-        div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
-      }
+      div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
+      div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+      div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
+      div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
+      div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
+      div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
+      div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
+    } else if (layerName === "HOA Rental Restrictions") {
+      div.innerHTML = "<strong>HOA Rental Restrictions</strong><br>";
+      div.innerHTML += '<i style="background:#1f78b4"></i> HOA Rental Restrictions<br>';
+      div.innerHTML += '<i style="background:#ffb347"></i> No HOA Rental Restrictions<br>';
+      div.innerHTML += '<i style="background:#ffff00"></i> Already Over 10%<br>';
       div.innerHTML += '<br><small><a href="#" onclick="document.getElementById(\'popup\').style.display=\'block\'">View data definitions</a><br>';
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
