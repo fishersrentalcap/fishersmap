@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multi-Layer Map</title>
+  <title>Fishers Rental Cap - Interactive Map</title>
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -74,7 +74,7 @@
     // Base layer control
     const baseLayers = {
       "Estimated Rentals": rentLayer,
-      "Red": redLayer,
+      "Eligible for New Rentals": redLayer,
       "Institutional Rentals": instLayer
     };
     L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
@@ -112,8 +112,8 @@
 
     function updateLegend(layerName) {
       const div = document.querySelector('.legend');
-      div.innerHTML = "<strong>Legend</strong><br>";
       if (layerName === "Estimated Rentals") {
+        div.innerHTML = "<strong>Estimated Rental Saturation</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
         div.innerHTML += '<i style="background:#C2F0C2"></i> Very Low Rentals (1–2%)<br>';
         div.innerHTML += '<i style="background:#99E699"></i> Low Rentals (3–4%)<br>';
@@ -123,19 +123,19 @@
         div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
         div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
         div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
-        div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
-      } else if (layerName === "Red") {
+      } else if (layerName === "Eligible for New Rentals") {
+        div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
         div.innerHTML += '<i style="background:#e31a1c"></i> Red Area Info<br>';
-        div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       } else if (layerName === "Institutional Rentals") {
+        div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
         div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
         div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
         div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
         div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
         div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
-        div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       }
+      div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
 
     updateLegend("Estimated Rentals");
