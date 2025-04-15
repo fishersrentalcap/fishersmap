@@ -98,13 +98,7 @@
         onEachFeature: bindPopup
       }).addTo(rentLayer));
 
-    fetch('red.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(redLayer));
-
+    // Red layer data not yet available
     fetch('inst.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
@@ -183,8 +177,7 @@ setTimeout(() => {
         div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
         div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
       } else if (layerName === "Eligible for New Rentals") {
-        div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
-        div.innerHTML += '<i style="background:#e31a1c"></i> Red Area Info<br>';
+        div.innerHTML = "<strong>Eligible for New Rentals</strong><br><em>(Coming Soon)</em><br>";
       } else if (layerName === "Institutional Rentals") {
         div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
