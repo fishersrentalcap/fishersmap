@@ -42,17 +42,17 @@
     }).addTo(map);
 
     // Define LayerGroups
-    const greenLayer = L.layerGroup();
+    const rentLayer = L.layerGroup();
     const redLayer = L.layerGroup();
     const instLayer = L.layerGroup();
 
     // Load each dataset
-    fetch('green.geojson')
+    fetch('rent.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
         style: styleFromProperties,
         onEachFeature: bindPopup
-      }).addTo(greenLayer));
+      }).addTo(rentLayer));
 
     fetch('red.geojson')
       .then(res => res.json())
@@ -69,11 +69,11 @@
       }).addTo(instLayer));
 
     // Add default visible layer
-    instLayer.addTo(map);
+    rentLayer.addTo(map);
 
     // Base layer control
     const baseLayers = {
-      "Green": greenLayer,
+      "Estimated Rentals": rentLayer,
       "Red": redLayer,
       "Institutional Rentals": instLayer
     };
@@ -113,10 +113,20 @@
     function updateLegend(layerName) {
       const div = document.querySelector('.legend');
       div.innerHTML = "<strong>Legend</strong><br>";
-      if (layerName === "Green") {
-        div.innerHTML += '<i style="background:#33a02c"></i> Green Area Info<br>';
+      if (layerName === "Estimated Rentals") {
+        div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+        div.innerHTML += '<i style="background:#C2F0C2"></i> Very Low Rentals (1–2%)<br>';
+        div.innerHTML += '<i style="background:#99E699"></i> Low Rentals (3–4%)<br>';
+        div.innerHTML += '<i style="background:#D6E685"></i> Rising Rentals (5–6%)<br>';
+        div.innerHTML += '<i style="background:#FFE066"></i> Moderate Rentals (7–9%)<br>';
+        div.innerHTML += '<i style="background:#FFB347"></i> High Rentals (10–14%)<br>';
+        div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
+        div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
+        div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
+        div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       } else if (layerName === "Red") {
         div.innerHTML += '<i style="background:#e31a1c"></i> Red Area Info<br>';
+        div.innerHTML += '<br><small>To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
       } else if (layerName === "Institutional Rentals") {
         div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
         div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
@@ -128,7 +138,7 @@
       }
     }
 
-    updateLegend("Institutional Rentals");
+    updateLegend("Estimated Rentals");
 
     map.on('baselayerchange', function(e) {
       updateLegend(e.name);
