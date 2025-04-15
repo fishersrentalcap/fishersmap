@@ -121,6 +121,24 @@
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
+// Add Show Legend checkbox directly under layer options
+setTimeout(() => {
+  const controls = document.querySelectorAll('.leaflet-control-layers-base input');
+  const lastItem = controls[controls.length - 1]?.parentElement;
+  if (lastItem) {
+    const legendLabel = document.createElement('label');
+    legendLabel.style.fontSize = '13px';
+    legendLabel.style.marginTop = '6px';
+    legendLabel.style.display = 'block';
+    legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
+    lastItem.parentElement.appendChild(legendLabel);
+    document.getElementById("toggle-legend").addEventListener("change", () => {
+      const legendBox = document.querySelector(".legend");
+      legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
+    });
+  }
+}, 0);
+
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
       const div = L.DomUtil.create("div", "legend");
