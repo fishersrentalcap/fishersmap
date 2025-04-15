@@ -1,4 +1,3 @@
-<!-- Full HTML file with "HOA Rental Restrictions" as the updated layer name -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,14 +120,28 @@
         onEachFeature: bindPopup
       }).addTo(redLayer));
 
-    rentLayer.addTo(map);
-
     const baseLayers = {
       "Total Estimated Rentals": rentLayer,
       "Institutional Rentals": instLayer,
       "HOA Rental Restrictions": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const defaultLayerName = getQueryParam("layer");
+    const defaultLayer = baseLayers[defaultLayerName];
+
+    if (defaultLayer) {
+      map.addLayer(defaultLayer);
+      updateLegend(defaultLayerName);
+    } else {
+      rentLayer.addTo(map);
+      updateLegend("Total Estimated Rentals");
+    }
 
     setTimeout(() => {
       const controls = document.querySelectorAll('.leaflet-control-layers-base input');
@@ -208,9 +221,11 @@
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
 
-    updateLegend("Total Estimated Rentals");
     map.on('baselayerchange', function(e) {
       updateLegend(e.name);
+      const url = new URL(window.location);
+      url.searchParams.set('layer', e.name);
+      window.history.replaceState({}, '', url);
     });
   </script>
 </body>
