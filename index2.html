@@ -97,9 +97,8 @@
     }).addTo(map);
 
     const rentLayer = L.layerGroup();
-const redLayer = L.layerGroup();
-const instLayer = L.layerGroup();
-const hoaLayer = L.layerGroup();
+    const redLayer = L.layerGroup();
+    const instLayer = L.layerGroup();
 
     fetch('rent.geojson')
       .then(res => res.json())
@@ -108,7 +107,6 @@ const hoaLayer = L.layerGroup();
         onEachFeature: bindPopup
       }).addTo(rentLayer));
 
-    // Red layer data not yet available
     fetch('inst.geojson')
       .then(res => res.json())
       .then(data => L.geoJSON(data, {
@@ -121,35 +119,33 @@ const hoaLayer = L.layerGroup();
       .then(data => L.geoJSON(data, {
         style: styleFromProperties,
         onEachFeature: bindPopup
-      }).addTo(hoaLayer));
+      }).addTo(redLayer));
 
     rentLayer.addTo(map);
 
     const baseLayers = {
       "Total Estimated Rentals": rentLayer,
       "Institutional Rentals": instLayer,
-      "HOA Rental Restrictions": hoaLayer,
       "Eligible for New Rentals": redLayer
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
-// Add Show Legend checkbox directly under layer options
-setTimeout(() => {
-  const controls = document.querySelectorAll('.leaflet-control-layers-base input');
-  const lastItem = controls[controls.length - 1]?.parentElement;
-  if (lastItem) {
-    const legendLabel = document.createElement('label');
-    legendLabel.style.fontSize = '13px';
-    legendLabel.style.marginTop = '6px';
-    legendLabel.style.display = 'block';
-    legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
-    lastItem.parentElement.appendChild(legendLabel);
-    document.getElementById("toggle-legend").addEventListener("change", () => {
-      const legendBox = document.querySelector(".legend");
-      legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
-    });
-  }
-}, 0);
+    setTimeout(() => {
+      const controls = document.querySelectorAll('.leaflet-control-layers-base input');
+      const lastItem = controls[controls.length - 1]?.parentElement;
+      if (lastItem) {
+        const legendLabel = document.createElement('label');
+        legendLabel.style.fontSize = '13px';
+        legendLabel.style.marginTop = '6px';
+        legendLabel.style.display = 'block';
+        legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
+        lastItem.parentElement.appendChild(legendLabel);
+        document.getElementById("toggle-legend").addEventListener("change", () => {
+          const legendBox = document.querySelector(".legend");
+          legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
+        });
+      }
+    }, 0);
 
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function(map) {
@@ -195,20 +191,19 @@ setTimeout(() => {
         div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
         div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
       } else if (layerName === "Eligible for New Rentals") {
-        div.innerHTML = "<strong>Eligible for New Rentals</strong><br><em>(Coming Soon)</em><br>";
+        div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
+        div.innerHTML += '<i style="background:#FFFF66"></i> Unregulated (no HOA restriction)<br>';
+        div.innerHTML += '<i style="background:#6699CC"></i> HOA with Rental Cap<br>';
+        div.innerHTML += '<i style="background:#FFD700"></i> Over 10% Already<br>';
       } else if (layerName === "Institutional Rentals") {
-      div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
-      div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
-      div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
-      div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
-      div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
-      div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
-      div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
-    } else if (layerName === "HOA Rental Restrictions") {
-      div.innerHTML = "<strong>HOA Rental Restrictions</strong><br>";
-      div.innerHTML += '<i style="background:#1f78b4"></i> HOA Rental Restrictions<br>';
-      div.innerHTML += '<i style="background:#ffb347"></i> No HOA Rental Restrictions<br>';
-      div.innerHTML += '<i style="background:#ffff00"></i> Already Over 10%<br>';
+        div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
+        div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+        div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
+        div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
+        div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
+        div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
+        div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
+      }
       div.innerHTML += '<br><small><a href="#" onclick="document.getElementById(\'popup\').style.display=\'block\'">View data definitions</a><br>';
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
