@@ -71,8 +71,8 @@
 </head>
 <body>
   <div id="map"></div>
-  <div id="popup" class="popup-overlay">
-    <h3>Data Sources & Definitions</h3>
+  $1
+    <p><em>If a residential subdivision is not shown on this map, it is either unincorporated or has fewer than 10 lots and is not subject to the City's ordinance.</em></p>
     <p><strong>Property Records:</strong> Data was extracted from the Hamilton County Property Records Database as of January 2025.</p>
     <p><strong>Subdivision Boundaries:</strong> Shape files were sourced from the Hamilton County GIS GeoHub. Each shape represents a subdivision based on platted land boundaries.</p>
     <p><strong>Estimated Rentals:</strong> Properties are classified as rentals if they meet both of the following criteria:</p>
@@ -200,7 +200,7 @@ setTimeout(() => {
       div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
     }
 
-    updateLegend("Estimated Rentals");
+    updateLegend("Total Estimated Rentals");
     map.on('baselayerchange', function(e) {
       updateLegend(e.name);
     });
