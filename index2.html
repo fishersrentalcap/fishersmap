@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5GBBZYNE7S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -79,11 +78,11 @@
       <li>The owner mailing address does not match the property address</li>
       <li>There is no active homestead exemption on file</li>
     </ul>
-    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential. Properties are identified as institutionally owned based on either the owner mailing address listed with the county or the principal address of the corporate entity as filed with the Indiana Secretary of State.</p>
-    <p><strong>HOA Rental Caps:</strong> Information on rental restrictions was obtained from the recorded Declaration of Covenants or amended Covenants for each homeowners association, as filed with the Hamilton County Recorder’s Office.</p>
-    <p><strong>To submit a correction or update,</strong> please contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
+    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential.</p>
+    <p><strong>HOA Rental Caps:</strong> Information was obtained from recorded Covenants or amended Covenants filed with the Hamilton County Recorder’s Office.</p>
+    <p><strong>To submit a correction or update,</strong> contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
     <p><strong>Disclaimer:</strong><br>
-    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties, nor has it released supporting details for the rental property figures shared during public presentations of the Rental Registration and Permitting Program.</p>
+    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties or to disclose methodology used in public presentations of the Rental Registration and Permitting Program.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
@@ -127,6 +126,15 @@
     };
     const layerControl = L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
+    const legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function(map) {
+      const div = L.DomUtil.create("div", "legend");
+      div.id = "legend-box";
+      div.innerHTML = '<div id="legend-content"></div>';
+      return div;
+    };
+    legend.addTo(map);
+
     function getQueryParam(param) {
       const urlParams = new URLSearchParams(window.location.search);
       return urlParams.get(param);
@@ -139,7 +147,7 @@
       map.addLayer(defaultLayer);
       updateLegend(defaultLayerName);
     } else {
-      rentLayer.addTo(map);
+      map.addLayer(rentLayer);
       updateLegend("Total Estimated Rentals");
     }
 
@@ -158,16 +166,7 @@
           legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
         });
       }
-    }, 0);
-
-    const legend = L.control({ position: "bottomleft" });
-    legend.onAdd = function(map) {
-      const div = L.DomUtil.create("div", "legend");
-      div.id = "legend-box";
-      div.innerHTML = '<div id="legend-content"></div>';
-      return div;
-    };
-    legend.addTo(map);
+    }, 100); // Delay to ensure DOM is ready
 
     function styleFromProperties(feature) {
       return {
