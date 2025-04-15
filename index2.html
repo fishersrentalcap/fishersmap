@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fishers Rental Cap - Interactive Map</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    body, html { margin: 0; padding: 0; height: 100%; }
-    #map { height: 100%; width: 100%; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fishers Rental Cap - Interactive Map</title>
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<style>
+body, html { margin: 0; padding: 0; height: 100%; }
+#map { height: 100%; width: 100%; }
 
-    .legend {
-      background: white;
-      padding: 10px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      line-height: 1.5;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-      max-width: 260px;
-                  position: relative;
-          }
+.legend {
+background: white;
+padding: 10px;
+border: 1px solid #ccc;
+font-size: 14px;
+line-height: 1.5;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
 
-    .legend i {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
-      opacity: 0.7;
-    }
+.legend i {
+display: inline-block;
+width: 18px;
+height: 18px;
+margin-right: 8px;
+opacity: 0.7;
+}
 
     .popup-overlay {
       position: absolute;
-      top: 10%;
+      top: 20%;
       left: 50%;
       transform: translateX(-50%);
-      width: 90%;
-      max-width: 400px;
-      max-height: 70%;
-      overflow-y: auto;
+      width: 300px;
       background: white;
       border: 1px solid #ccc;
       padding: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 1000;
       display: none;
-      font-size: 14px;
-      line-height: 1.4;
-      -webkit-overflow-scrolling: touch;
     }
 
     .popup-overlay h3 {
       margin-top: 0;
-      font-size: 16px;
     }
 
     .popup-overlay button {
@@ -58,156 +52,134 @@
       margin-top: 10px;
       padding: 5px 10px;
     }
-  </style>
+</style>
 </head>
 <body>
-  <div id="map"></div>
+<div id="map"></div>
   <div id="popup" class="popup-overlay">
-    <h3>Data Sources & Definitions</h3>
-    <p><strong>Property Records:</strong> Data was extracted from the Hamilton County Property Records Database as of January 2025.</p>
-    <p><strong>Subdivision Boundaries:</strong> Shape files were sourced from the Hamilton County GIS GeoHub. Each shape represents a subdivision based on platted land boundaries.</p>
-    <p><strong>Estimated Rentals:</strong> Properties are classified as rentals if they meet both of the following criteria:</p>
-    <ul>
-      <li>The owner mailing address does not match the property address</li>
-      <li>There is no active homestead exemption on file</li>
-    </ul>
-    <p><strong>Institutional Investors:</strong> These include American Homes 4 Rent, AMH, Amherst, Bridge Homes, FirstKey Homes, Maymont Homes, My Community Homes, Progress Residential, and Tricon Residential. Properties are identified as institutionally owned based on either the owner mailing address listed with the county or the principal address of the corporate entity as filed with the Indiana Secretary of State.</p>
-    <p><strong>HOA Rental Caps:</strong> Information on rental restrictions was obtained from the recorded Declaration of Covenants or amended Covenants for each homeowners association, as filed with the Hamilton County Recorder’s Office.</p>
-    <p><strong>To submit a correction or update,</strong> please contact <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a>.</p>
-    <p><strong>Disclaimer:</strong><br>
-    Despite multiple public records requests, the City of Fishers has declined to provide any data from the software platform it uses to identify potential rental properties, nor has it released supporting details for the rental property figures shared during public presentations of the Rental Registration and Permitting Program.</p>
+    <h3>Data Definitions</h3>
+    <p><strong>Estimated Rentals:</strong> Percentage of homes suspected to be rental properties based on property characteristics.</p>
+    <p><strong>Institutional Rentals:</strong> Homes owned by entities classified as institutional investors.</p>
+    <p><strong>Eligible for New Rentals:</strong> Subdivisions currently under the rental cap and therefore eligible for additional rental permits.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    const map = L.map('map').setView([39.95, -86.0], 11);
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([39.95, -86.0], 11);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
 
-    const rentLayer = L.layerGroup();
-    const redLayer = L.layerGroup();
-    const instLayer = L.layerGroup();
+    // Define LayerGroups
+const rentLayer = L.layerGroup();
+const redLayer = L.layerGroup();
+const instLayer = L.layerGroup();
 
-    fetch('rent.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(rentLayer));
+    // Load each dataset
+fetch('rent.geojson')
+.then(res => res.json())
+.then(data => L.geoJSON(data, {
+style: styleFromProperties,
+onEachFeature: bindPopup
+}).addTo(rentLayer));
 
-    fetch('red.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(redLayer));
+fetch('red.geojson')
+.then(res => res.json())
+.then(data => L.geoJSON(data, {
+style: styleFromProperties,
+onEachFeature: bindPopup
+}).addTo(redLayer));
 
-    fetch('inst.geojson')
-      .then(res => res.json())
-      .then(data => L.geoJSON(data, {
-        style: styleFromProperties,
-        onEachFeature: bindPopup
-      }).addTo(instLayer));
+fetch('inst.geojson')
+.then(res => res.json())
+.then(data => L.geoJSON(data, {
+style: styleFromProperties,
+onEachFeature: bindPopup
+}).addTo(instLayer));
 
-    rentLayer.addTo(map);
+    // Add default visible layer
+rentLayer.addTo(map);
 
-    const baseLayers = {
-      "Estimated Rentals": rentLayer,
-      "Eligible for New Rentals": redLayer,
-      "Institutional Rentals": instLayer
-    };
-    const layerControl = L.control.layers(baseLayers, null, { collapsed: false });
-layerControl.addTo(map);
-
-// Add legend checkbox to the layer control
-const layerControlContainer = document.querySelector('.leaflet-control-layers-list');
-if (layerControlContainer) {
-  const legendLabel = document.createElement('label');
-  legendLabel.style.fontSize = '13px';
-  legendLabel.style.marginTop = '6px';
-  legendLabel.innerHTML = '<input type="checkbox" id="toggle-legend" checked> Show Legend';
-  layerControlContainer.appendChild(legendLabel);
-  document.getElementById("toggle-legend").addEventListener("change", () => {
-    const legendBox = document.querySelector(".legend");
-    if (legendBox) legendBox.style.display = document.getElementById("toggle-legend").checked ? "block" : "none";
-  });
-}
-  }
-}, 0);
-
-    function styleFromProperties(feature) {
-      return {
-        color: feature.properties.stroke || '#000000',
-        weight: feature.properties['stroke-width'] || 1,
-        opacity: feature.properties['stroke-opacity'] || 1,
-        fillColor: feature.properties.fill || '#AAAAAA',
-        fillOpacity: feature.properties['fill-opacity'] || 0.5
-      };
-    }
-
-    function bindPopup(feature, layer) {
-      let popupContent = "<table>";
-      for (const key in feature.properties) {
-        if (["fill", "stroke", "stroke-width", "stroke-opacity", "fill-opacity", "GlobalID", "MVP_SUBDIV"].includes(key)) continue;
-        const value = feature.properties[key];
-        popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
-      }
-      popupContent += "</table>";
-      layer.bindPopup(popupContent);
-    }
-
-    const legend = L.control({ position: "bottomleft" });
-legend.onAdd = function(map) {
-  const div = L.DomUtil.create("div", "legend");
-  div.id = "legend-box";
-  div.innerHTML = '<div id="legend-content"></div>';
-  return div;
+    // Base layer control
+const baseLayers = {
+"Estimated Rentals": rentLayer,
+"Eligible for New Rentals": redLayer,
+"Institutional Rentals": instLayer
 };
+L.control.layers(baseLayers, null, { collapsed: false }).addTo(map);
 
-
+    // Feature style
+function styleFromProperties(feature) {
+return {
+color: feature.properties.stroke || '#000000',
+weight: feature.properties['stroke-width'] || 1,
+opacity: feature.properties['stroke-opacity'] || 1,
+fillColor: feature.properties.fill || '#AAAAAA',
+fillOpacity: feature.properties['fill-opacity'] || 0.5
+};
 }
 
-legendBox.style.display = "block";
-  }
-});
+    // Popups
+function bindPopup(feature, layer) {
+let popupContent = "<table>";
+for (const key in feature.properties) {
+const value = feature.properties[key];
+popupContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
+}
+popupContent += "</table>";
+layer.bindPopup(popupContent);
+}
 
+    // Dynamic Legend
+const legend = L.control({ position: "bottomleft" });
+legend.onAdd = function(map) {
+const div = L.DomUtil.create("div", "legend");
+div.innerHTML = "";
+return div;
+};
+legend.addTo(map);
 
-    function updateLegend(layerName) {
-      const div = document.querySelector('#legend-content');
-      if (layerName === "Estimated Rentals") {
-        div.innerHTML = "<strong>Estimated Rental Saturation</strong><br>";
-        div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
-        div.innerHTML += '<i style="background:#C2F0C2"></i> Very Low Rentals (1–2%)<br>';
-        div.innerHTML += '<i style="background:#99E699"></i> Low Rentals (3–4%)<br>';
-        div.innerHTML += '<i style="background:#D6E685"></i> Rising Rentals (5–6%)<br>';
-        div.innerHTML += '<i style="background:#FFE066"></i> Moderate Rentals (7–9%)<br>';
-        div.innerHTML += '<i style="background:#FFB347"></i> High Rentals (10–14%)<br>';
-        div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
-        div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
-        div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
-      } else if (layerName === "Eligible for New Rentals") {
-        div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
-        div.innerHTML += '<i style="background:#e31a1c"></i> Red Area Info<br>';
-      } else if (layerName === "Institutional Rentals") {
-        div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
-        div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
-        div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
-        div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
-        div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
-        div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
-        div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
-      }
+function updateLegend(layerName) {
+const div = document.querySelector('.legend');
+if (layerName === "Estimated Rentals") {
+div.innerHTML = "<strong>Estimated Rental Saturation</strong><br>";
+div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+div.innerHTML += '<i style="background:#C2F0C2"></i> Very Low Rentals (1–2%)<br>';
+div.innerHTML += '<i style="background:#99E699"></i> Low Rentals (3–4%)<br>';
+div.innerHTML += '<i style="background:#D6E685"></i> Rising Rentals (5–6%)<br>';
+div.innerHTML += '<i style="background:#FFE066"></i> Moderate Rentals (7–9%)<br>';
+div.innerHTML += '<i style="background:#FFB347"></i> High Rentals (10–14%)<br>';
+div.innerHTML += '<i style="background:#FF884D"></i> Very High Rentals (15–24%)<br>';
+div.innerHTML += '<i style="background:#E65C00"></i> Extreme Rentals (25–49%)<br>';
+div.innerHTML += '<i style="background:#CC0000"></i> Saturated (50%+)<br>';
+} else if (layerName === "Eligible for New Rentals") {
+div.innerHTML = "<strong>Eligible for New Rentals</strong><br>";
+div.innerHTML += '<i style="background:#e31a1c"></i> Red Area Info<br>';
+} else if (layerName === "Institutional Rentals") {
+div.innerHTML = "<strong>Institutional Rental Categories</strong><br>";
+div.innerHTML += '<i style="background:#CCCCCC"></i> None (0%)<br>';
+div.innerHTML += '<i style="background:#A8E6A3"></i> Very Low (1–2%)<br>';
+div.innerHTML += '<i style="background:#D6E685"></i> Low (3–5%)<br>';
+div.innerHTML += '<i style="background:#FFB347"></i> Moderate (6–9%)<br>';
+div.innerHTML += '<i style="background:#FF704D"></i> High (10–14%)<br>';
+div.innerHTML += '<i style="background:#E60000"></i> Very High (15–20%)<br>';
+}
+      div.innerHTML += '<br><small><a href="#" onclick="showDefinitionsPopup(); return false;">View data definitions</a><br>';
       div.innerHTML += '<br><small><a href="#" onclick="document.getElementById(\'popup\').style.display=\'block\'">View data definitions</a><br>';
-      div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
+div.innerHTML += 'To submit a data correction, email <a href="mailto:data@fishersrentalcap.com">data@fishersrentalcap.com</a></small>';
+}
+
+    function showDefinitionsPopup() {
+      alert("Definitions:\n\nEstimated Rentals: % of homes suspected to be rental properties.\nInstitutional Rentals: Properties owned by institutional investors.\nEligible for New Rentals: Subdivisions below the rental cap threshold.");
     }
 
-    updateLegend("Estimated Rentals");
-    map.on('baselayerchange', function(e) {
-      updateLegend(e.name);
-    });
-  </script>
+updateLegend("Estimated Rentals");
+
+map.on('baselayerchange', function(e) {
+updateLegend(e.name);
+});
+</script>
 </body>
 </html>
